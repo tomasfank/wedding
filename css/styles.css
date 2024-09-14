@@ -16,12 +16,12 @@ a{
 /* Fuentes */
 .fuente{
     font-family: "Quattrocento", serif;
-    color: rgb(52, 59, 85) !important;
+    color: #323B60 !important;
 }
 
 .fuente_cursiva{
     font-family: "Dancing Script", cursive;
-    color: rgb(52, 59, 85) !important;
+    color: #323B60 !important;
     font-size: 1.5rem;
 }
 /* FIN Fuentes */
@@ -31,8 +31,13 @@ a{
     height: 80px;
 }
 
+/* OPCIONES DE COLORES
+1. #EFD3BF
+
+*/
+
 .container_pink{
-    background-color: #F4CECE;
+    background-color: #EFD3BF;
     background-size: cover;
 }
 
@@ -45,7 +50,7 @@ a{
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    border: 2px solid #d8a690;
+    border: 2px solid #EFD3BF;
     border-radius: 10px;
     background-color: white;
     width: 10px;
