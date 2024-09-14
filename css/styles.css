@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("/images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Fuentes */
+.fuente{
+    font-family: "Quattrocento", serif;
+    color: rgb(52, 59, 85) !important;
+}
+
+.fuente_cursiva{
+    font-family: "Dancing Script", cursive;
+    color: rgb(52, 59, 85) !important;
+    font-size: 1.5rem;
+}
+/* FIN Fuentes */
+
+.imagenes_sm img{
+    width: 82px;
+    height: 80px;
+}
+
+.container_pink{
+    background-color: rgb(241, 205, 193);
+    background-size: cover;
+}
+
+.justificado{
+    text-align: justify;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #d8a690;
+    border-radius: 10px;
+    background-color: white;
+    width: 10px;
+}
+
+.time-box span {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.time-box .label {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* --------------------------------- Responsive --------------------------------- */
+/* mobile */
+@media (max-width: 920px) {
+    .size-title{
+        font-size: 2.2rem;
+    }
+    .size-sub{
+        font-size: 1.8rem;
+    }
+    .size-font-1{
+        font-size: 1.2rem;
+    }
+    .size-font-2{
+        font-size: 2rem;
+    }
+    .size-date{
+        font-size: 2.5rem;
+    }
+    .imagenes img{
+        width: 90%;
+        height: 90%;
+    } 
+    .time-box span{
+        font-size: 2rem;
+    }
+    .imagenes_sm img{
+        width: 25%;
+        height: 25%;
+    }
+}
+
+
+/* desktop   */
+@media (min-width: 921px){
+    .imagenes img{
+        width: 45%;
+        height: 45%;
+    }
+    #countdown{
+        width: 25vw;
+    }
+    .size-title{
+        font-size: 5rem;
+    }
+    .size-sub{
+        font-size: 3rem;
+    }
+    .size-font-1{
+        font-size: 2rem;
+    }
+    .size-font-2{
+        font-size: 3rem;
+    }
+    .size-date{
+        font-size: 5rem;
+    }
+    .imagenes_sm img{
+        width: 20%;
+        height: 15%;
+    }
+}
