@@ -1,3 +1,35 @@
+// Obtener parámetro de la url
+function getUrlParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams.get(name));
+    return urlParams.get(name);
+};
+
+// Cargar el JSON y ejecutar la lógica
+function cargarInvitados() {
+    fetch('db/lista.json')  // Ruta al archivo JSON
+        .then(response => response.json())
+        .then(data => {
+            const familiaParam = getUrlParameter('familia');
+            mostrarBienvenida(familiaParam, data.invitados);
+        })
+        .catch(error => {
+            console.error('Error al cargar el archivo JSON:', error);
+        });
+}
+
+// Función para mostrar la bienvenida
+function mostrarBienvenida(familiaParam, invitados) {
+    const familia = invitados.find(fam => fam.familia === familiaParam);
+
+    if (familia) {
+        const nombreInvitados = familia.invitados.join(", ");
+        document.getElementById('bienvenida').innerText = `Bienvenidos ${nombreInvitados}`;
+    } else {
+        document.getElementById('bienvenida').innerText = 'Bienvenidos a nuestra boda';
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     
     // Fecha de destino para el contador
@@ -28,4 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Actualizar el contador cada minuto
     const countdownInterval = setInterval(updateCountdown, 1000 * 60);
     updateCountdown(); // Llamada inicial
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    cargarInvitados();
 });

@@ -74,6 +74,31 @@ a{
     padding: 12px 50px;
 }
 
+/* --------------------------------- WELCOME --------------------------------- */
+.save_date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.save_date h1{
+    text-align: center;
+    display: block;
+}
+
+.save_date h2{
+    text-align: center;
+    display: none;
+}
+/* 
+:root {
+    --animate-duration: 1200ms;
+    --animate-delay: 2s;
+  } */
+
+
+
 /* --------------------------------- Responsive --------------------------------- */
 /* mobile */
 @media (max-width: 920px) {
