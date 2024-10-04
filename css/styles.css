@@ -13,6 +13,10 @@ a{
     color: white;
 }
 
+#principal {
+    display: none;
+}
+
 /* Fuentes */
 .fuente{
     font-family: "Quattrocento", serif;
@@ -75,19 +79,19 @@ a{
 }
 
 /* --------------------------------- WELCOME --------------------------------- */
-.save_date{
+#save_date{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
 }
-.save_date h1{
+#save_date h1{
     text-align: center;
     display: block;
 }
 
-.save_date h2{
+#save_date h2{
     text-align: center;
     display: none;
 }

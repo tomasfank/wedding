@@ -1,5 +1,7 @@
 const titulo = document.getElementById('save_the_date');
 const fecha = document.getElementById('date_to_save');
+const save_date = document.getElementById('save_date');
+const principal = document.getElementById('principal');
 
 titulo.style.setProperty('--animate-duration', '2s');
 
@@ -28,8 +30,11 @@ const desaparecer = () =>{
 
     fecha.addEventListener('animationend', ()=>{
         fecha.style.display = 'none';
+        save_date.style.display = 'none';
 
-        window.location.href = 'index.html'
+        principal.style.display = 'block';
+        principal.style.setProperty('--animate-duration', '2s');
+        principal.classList.add('animate__animated', 'animate__fadeIn');
     })
 }
 
